@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import fire from "./fire";
 import Home from "./Home";
 import Login from "./Login";
+import "./App.css";
 
 class App extends Component {
   constructor(props) {
@@ -23,7 +24,11 @@ class App extends Component {
     });
   }
   render() {
-    return <div>{this.state.user ? <Home /> : <Login />}</div>;
+    return (
+      <div className="container">
+        <div>{this.state.user ? <Home /> : <Login />}</div>
+      </div>
+    );
   }
 }
 
