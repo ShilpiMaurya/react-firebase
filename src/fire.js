@@ -1,16 +1,14 @@
 import firebase from "firebase";
-console.log(process.env, "key");
-console.log(process.env.REACT_APP_API_KEY, "api key");
 
 const firebaseConfig = {
   apiKey: `${process.env.REACT_APP_API_KEY}`,
   authDomain: "react-firebase-ef74e.firebaseapp.com",
   databaseURL: "https://react-firebase-ef74e.firebaseio.com",
-  projectId: "react-firebase-ef74e",
-  storageBucket: "react-firebase-ef74e.appspot.com",
-  messagingSenderId: "955712029169",
-  appId: "1:955712029169:web:8f8197915e019f276a8450",
-  measurementId: "G-1X4H0GVV7S"
+  projectId: `${process.env.REACT_APP_PROJECT_ID}`,
+  storageBucket: `${process.env.REACT_APP_STORAGE_BUCKET}`,
+  messagingSenderId: `${process.env.REACT_APP_MESSAGING_SENDER_ID}`,
+  appId: `${process.env.REACT_APP_APP_ID}`,
+  measurementId: `${process.env.REACT_APP_MEASUREMENT_ID}`
 };
 
 const fire = firebase.initializeApp(firebaseConfig);
